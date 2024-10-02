@@ -1,0 +1,324 @@
+/* Reset some basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #faf9f6; /* Light cream background for a clean look */
+    color: #2d2d2d;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    background: linear-gradient(45deg, #2e3b55, #1c2c47); /* Dark navy blue gradient */
+    color: #fff;
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.profile-photo img {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc5c; /* Mustard yellow hover color */
+}
+
+/* Hero Section */
+.hero {
+    padding: 100px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #ff6f61, #f09819); /* Coral and mustard gradient */
+    color: #fff;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    background-color: #fff;
+    color: #ff6f61; /* Coral color */
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #ffcc5c; /* Mustard hover effect */
+}
+
+/* About Me */
+.about-me {
+    padding: 60px 0;
+    background-color: #faf9f6; /* Cream background */
+    text-align: center;
+}
+
+.about-me h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-family: 'Raleway', sans-serif;
+    color: #ff6f61; /* Coral heading */
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+.highlight {
+    color: darkblue;
+    font-weight: 600;
+}
+
+/* Skills */
+.skills {
+    padding: 60px 0;
+    background-color: #f3e5ab; /* Soft yellow background */
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.skill-item {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.skill-circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: #ffcc5c; /* Mustard color for skill circles */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.skill-circle span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2d2d2d;
+}
+
+.skill-circle:before {
+    content: attr(data-level) '%';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* Projects */
+.projects {
+    padding: 60px 0;
+    background-color: #faf9f6; /* Light cream background */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #ff6f61; /* Coral background for project cards */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    margin: 10px 0;
+    color: #fff;
+}
+
+.project-card .btn {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #ff6f61; /* Coral button */
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.project-card .btn:hover {
+    background-color: #ffcc5c; /* Mustard hover color */
+}
+
+/* Contact */
+.contact {
+    padding: 60px 0;
+    background-color: #f3e5ab; /* Soft yellow background */
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+.btn {
+    background-color: #ff6f61; /* Coral button */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ffcc5c; /* Mustard hover effect */
+}
+
+.social-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #2e3b55; /* Navy blue for social links */
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    display: none; /* Hidden by default */
+}
+
+input.error,
+textarea.error {
+    border: 1px solid red;
+}
+
+/* Footer */
+footer {
+    background-color: #2e3b55; /* Dark navy blue */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
