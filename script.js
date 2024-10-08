@@ -1,18 +1,19 @@
-document.getElementById("generate-user").addEventListener("click", fetchRandomUser);
-
-function fetchRandomUser() {
-    fetch('https://randomuser.me/api/')
+document.addEventListener("DOMContentLoaded", function () {
+    // Fetch a random user from RandomUser.me API
+    fetch("https://randomuser.me/api/")
         .then(response => response.json())
         .then(data => {
-            const user = data.results[0];
-            document.getElementById("name").innerText = `Name: ${user.name.first} ${user.name.last}`;
-            document.getElementById("email").innerText = `Email: ${user.email}`;
-            document.getElementById("profile-pic").src = user.picture.large;
+            // Access the image URL from the API response
+            const userImageUrl = data.results[0].picture.large;
+            // Set the src attribute of the random user image in the HTML
+            document.getElementById("randomuser").src = userImageUrl;
         })
         .catch(error => {
-            console.error('Error fetching random user:', error);
+            console.error("Error fetching random user image:", error);
+            document.getElementById("randomuser").alt = "Failed to load user image";
         });
-}
+});
+
 // JavaScript to handle form validation and mock submission
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contactForm');
